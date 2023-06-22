@@ -31,12 +31,15 @@ private:
 	float GetDistanceMoved() const;
 
 private:
-	UPROPERTY(VisibleAnywhere, Category = "Moving Platform")
+	UPROPERTY(VisibleAnywhere, Category = "Moving")
 		FVector StartLocation = FVector(0, 0, 0);
 
-	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+	UPROPERTY(EditAnywhere, Category = "Moving")
 		FVector PlatformVelocity = FVector(100, 0, 0);
 
-	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+	UPROPERTY(EditAnywhere, Category = "Moving")
 		float MoveDistance = 100.f;
+
+	UPROPERTY(EditAnywhere, Category = "Rotation")
+		FRotator RotationVelocity;
 };
